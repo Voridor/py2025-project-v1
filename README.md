@@ -86,7 +86,7 @@ Każdy commit powinien mieć jasny i zwięzły komunikat, który opisuje, co zos
 
 **Przykłady:**
 
-    Dodanie klasy Sensor i podstawowej symulacji odczytów
+    Dodanie klasy sensor i podstawowej symulacji odczytów
 
     Implementacja zapisu danych do pliku CSV
 

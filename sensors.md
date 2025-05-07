@@ -25,9 +25,9 @@ Moduł „Czujników” ma symulować działanie fizycznych sensorów w systemie
   Klasa bazowa ma udostępniać spójny interfejs do generowania odczytów, dzięki czemu kolejne typy sensorów (dziedziczące z klasy bazowej) będą mogły redefiniować tylko specyficzne zachowania.
 
 
-## 2. Specyfikacja klasy bazowej Sensor
+## 2. Specyfikacja klasy bazowej sensor
 
-### A. Atrybuty klasy Sensor
+### A. Atrybuty klasy sensor
 
   sensor_id (string/int): Unikalny identyfikator czujnika.
 
@@ -43,7 +43,7 @@ Moduł „Czujników” ma symulować działanie fizycznych sensorów w systemie
 
   last_value: Ostatnio wygenerowana wartość.
 
-### B. Metody klasy Sensor
+### B. Metody klasy sensor
 
   __init__(...)
   Inicjuje podstawowe atrybuty, ustawia domyślne parametry oraz flagę aktywności.
@@ -60,14 +60,14 @@ Moduł „Czujników” ma symulować działanie fizycznych sensorów w systemie
   start() / stop()
   Proste metody umożliwiające włączanie lub wyłączanie symulacji czujnika (zmiana wartości flagi active).
 
-### C. Przykładowa implementacja klasy bazowej Sensor
+### C. Przykładowa implementacja klasy bazowej sensor
 
 ```python
 
 import random
 import time
 
-class Sensor:
+class sensor:
     def __init__(self, sensor_id, name, unit, min_value, max_value, frequency=1):
         """
         Inicjalizacja czujnika.
@@ -132,13 +132,13 @@ class Sensor:
         self.active = False
 
     def __str__(self):
-        return f"Sensor(id={self.sensor_id}, name={self.name}, unit={self.unit})"
+        return f"sensor(id={self.sensor_id}, name={self.name}, unit={self.unit})"
 ```
 
 
 3. 4 z 7 typów czujników do zasymulowania
 
-Wybrać co najmniej 4 z poniższej listy do implementacji. Każdy typ powinien dziedziczyć po klasie bazowej Sensor i nadpisywać metodę read_value(), aby dostosować generację danych do specyfiki danego czujnika.
+Wybrać co najmniej 4 z poniższej listy do implementacji. Każdy typ powinien dziedziczyć po klasie bazowej sensor i nadpisywać metodę read_value(), aby dostosować generację danych do specyfiki danego czujnika.
 
   Czujnik temperatury (TemperatureSensor):
 
