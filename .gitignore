@@ -3,3 +3,5 @@ sensorTest.py
 
 /__pycache__
 sensorTest.py
+loggerTest.py
+logs/sensors_20250514.csv
