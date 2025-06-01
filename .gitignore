@@ -5,3 +5,8 @@ sensorTest.py
 sensorTest.py
 loggerTest.py
 logs/sensors_20250514.csv
+<<<<<<< Updated upstream
+=======
+loggerTest.py
+/network/__pycache__
+>>>>>>> Stashed changes
