@@ -17,12 +17,12 @@ class SensorApplication:
         self.logger = Logger(config_path='config.json')
         self.logger.start()
 
-        self.server = NetworkServer(
-            host='127.0.0.1',
-            port=9999,
-        )
-        self.server_thread = threading.Thread(target=self.server.start, daemon=True)
-        self.server_thread.start()
+        # self.server = NetworkServer(
+        #     host='127.0.0.1',
+        #     port=9999,
+        # )
+        # self.server_thread = threading.Thread(target=self.server.start, daemon=True)
+        # self.server_thread.start()
 
         # Inicjalizacja klienta sieciowego
         client_config = load_client_config()
