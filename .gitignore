@@ -6,3 +6,5 @@ sensorTest.py
 loggerTest.py
 logs/sensors_20250514.csv
 loggerTest.py
+/network/__pycache__
+/server/__pycache__

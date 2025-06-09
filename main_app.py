@@ -5,7 +5,9 @@ from typing import List
 # Importy modułów z projektu
 from sensor import TemperatureSensor, HumiditySensor, PressureSensor, LightSensor, sensor as BaseSensor
 from Logger import Logger
+import threading
 from network.client import NetworkClient
+from server.server import NetworkServer
 from network.config import load_client_config
 
 
@@ -14,6 +16,13 @@ class SensorApplication:
         # Inicjalizacja Loggera
         self.logger = Logger(config_path='config.json')
         self.logger.start()
+
+        self.server = NetworkServer(
+            host='127.0.0.1',
+            port=9999,
+        )
+        self.server_thread = threading.Thread(target=self.server.start, daemon=True)
+        self.server_thread.start()
 
         # Inicjalizacja klienta sieciowego
         client_config = load_client_config()
